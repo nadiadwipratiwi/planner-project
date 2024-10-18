@@ -13,19 +13,19 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-primary py-3">
+    <nav class="navbar navbar-expand-lg bg-secondary text-white py-3">
         <div class="container-fluid">
           <a class="navbar-brand text-white" href="{{ route('tasks.index') }}">Planner!</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav nav-underline">
               <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="{{ route('tasks.index') }}">Tugas</a>
+                <a class="nav-link text-white {{ Route::is('tasks.index') ? 'active nav-underline' : '' }}" aria-current="page" href="{{ route('tasks.index') }}">Tugas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="{{ route('categories.index') }}">Mata Pelajaran</a>
+                <a class="nav-link text-white {{ Route::is('categories.index') ? 'active nav-underline' : '' }}" href="{{ route('categories.index') }}">Mata Pelajaran</a>
               </li>
             </ul>
           </div>
